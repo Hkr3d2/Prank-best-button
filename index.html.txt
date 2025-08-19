@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Für Herrn Dewes</title>
+</head>
+<body>
+
+<h1 style="font-family:Arial;color: #ffd700">Sehr geherrter Herr Dewes!</h1>
+<p style="color: #cce0f2">Die neuen Aufgaben im Kursnotizbuch waren ziemlich einfach.</p> <img src="Microsoft_Office_OneNote_(2019–present).svg" alt="OneNote Icon"
+  style="font-family:fantasy;float:right;width:50px;height:80px;color: #f0f0f0">
+<p style="color: #ccff90;font-family:monaco;">Genau so wie es in Aufgabe 3 steht.</p>
+
+<p style="font-family:monaco;color: #e6f0fa">Ich hoffe dass sie bald den Informatikunterricht übernehmen.</p>
+​
+
+
+<p style="font-family:monaco;color: #a8d8ea">PS: Ich habe meinen Ipad Stift verloren und deswegen habe ich das Bild einfach kopiert.</p>
+  <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(45deg, 
+                #0a2463,  /* Deep blue */
+                #3e5f8a,  /* Medium blue */
+                #644392,  /* Blue-purple */
+                #7e5cba,  /* Royal purple */
+                #9b7bd9); /* Lavender */
+            background-size: 400% 400%;
+            animation: gradientFlow 15s ease infinite;
+        }
+        
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+  <head>
+    <style>
+ .button {
+            background: linear-gradient(45deg, #04AA6D, #0fd850, #04AA6D);
+            background-size: 200% 200%;
+            border: none;
+            color: white;
+            padding: 28px 404px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 98px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: gradientBG 3s ease infinite;
+        }
+
+        .button:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .button:active {
+            transform: scale(0.98);
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+  </head>
+  <button class="button" id="soundButton">Das beste Knopf der Welt</button>
+      <audio id="soundEffect" preload="auto">
+        <source src="mouse-button-click-308449.mp3" type="audio/mpeg">
+        Ihr Browser unterstützt kein Audio.
+    </audio>
+    <script>
+        const button = document.getElementById('soundButton');
+        const sound = document.getElementById('soundEffect');
+
+        button.addEventListener('click', () => {
+            sound.currentTime = 0;
+            sound.play();
+            
+            // Visual feedback
+            button.style.animation = 'none';
+            setTimeout(() => {
+                button.style.animation = 'gradientBG 3s ease infinite';
+            }, 10);
+        });
+    </script>
+</html>
